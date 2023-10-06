@@ -22,13 +22,18 @@
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-bindings</artifactId>
-            <version>1.10.0</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -53,7 +58,7 @@
                         <builder>paketobuildpacks/builder:tiny</builder>
                         <name>myimage:1.0.0</name>
                         <env>
-                            <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
+                            <BP_NATIVE_IMAGE>false</BP_NATIVE_IMAGE>
                             <BP_JVM_VERSION>17</BP_JVM_VERSION>
                         </env>
                     </image>
